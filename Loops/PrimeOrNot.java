@@ -14,7 +14,7 @@ public class PrimeOrNot {
             System.out.println(n+ " is a prime number");
         }
         else{
-            for(int i=2;i<Math.sqrt(n);i++){
+            for(int i=2;i<=Math.sqrt(n);i++){
                 if(n%i==0){
                     x = false;
                 }
