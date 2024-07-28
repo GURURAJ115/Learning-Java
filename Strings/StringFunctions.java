@@ -45,6 +45,7 @@ public class StringFunctions {
         System.out.println("Enter ending index :");
         int ei = sc.nextInt();
         sc.close();
-        System.out.println(substring(s, si, ei));
+        // System.out.println(substring(s, si, ei));
+        System.out.println(s.substring(si,ei));
     }
 }
