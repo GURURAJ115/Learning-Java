@@ -10,6 +10,7 @@ public class PowerOfTwo {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number : ");
         int n = sc.nextInt();
+        sc.close();
         System.out.println(isPowerOfTwo(n));
     }
 }
