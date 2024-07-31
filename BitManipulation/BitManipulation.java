@@ -29,18 +29,29 @@ public class BitManipulation {
         int bitMask = (~0)<<i;
         return n&bitMask;
     }
+    public static int clearIBits(int n, int i, int j){
+        int a = ((~0)<<(j+1));
+        int b = (1<<i)-1;
+        int bitMask = a|b;
+        return n&bitMask;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number :");
         int n = sc.nextInt();
         System.out.println("Enter the position :");
         int i = sc.nextInt();
-        sc.close();
         System.out.print("Given Number is : ");
         oddOrEven(n);
         System.out.println("The "+i+" bit is : "+getIthBit(n, i));
         System.out.println("After setting the "+i+" bit: "+setIthBit(n, i));
         System.out.println("After clearing the "+i+" bit: "+clearIthBit(n, i));
         System.out.println("After clearing "+i+" bits:"+clearIBits(n,i));
+        System.out.println("Enter the range for clearing (a,b) :");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        sc.close();
+        System.out.println("After clearing "+a+","+b+" bits:"+clearIBits(n,a,b));
+
     }
 }
