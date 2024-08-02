@@ -13,6 +13,7 @@ public class OOPS {
         myAcc.setPassword("abcdefghi");
         System.out.println(myAcc.username);
         // cannot access pass bcz it is private but u can change passwd using setpasswd 
+        System.out.println(myAcc.getPasswd());
     }
 }
 class BankAccount{
@@ -21,11 +22,16 @@ class BankAccount{
     public void setPassword(String pwd){
         password = pwd;
     }
+    // Getters
+    String getPasswd(){
+        return this.password;
+    }
 }
 class Pen{
     String color;
     int tip;
 
+    //setters
     void setColor(String newColor){
         color = newColor;
     }
