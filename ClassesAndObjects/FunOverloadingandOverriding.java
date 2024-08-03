@@ -3,6 +3,7 @@ public class FunOverloadingandOverriding{
         
     }
 }
+// This is polymorphism
 class Employee{
     public void something(){
         System.out.println("Hello");
