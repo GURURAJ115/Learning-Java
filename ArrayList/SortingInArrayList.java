@@ -14,7 +14,10 @@ public class SortingInArrayList {
         list.add(4);
         
         System.out.println(list);
-        Collections.sort(list);
+        Collections.sort(list);//ascending
+        System.out.println(list);
+
+        Collections.sort(list,Collections.reverseOrder());
         System.out.println(list);
     }
 }
