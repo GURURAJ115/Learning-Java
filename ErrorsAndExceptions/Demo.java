@@ -4,6 +4,9 @@ package ErrorsAndExceptions;
 // 2.Runtime Error - It gives exceptions and we have to handle it.
 // 3.Logical Error 
 public class Demo {
+    public void show() throws ClassNotFoundException{
+        Class.forName("Calc");
+    }
     public static void main(String[] args) {
         // System.out.printn(); This gives an error which is a syntactical error and you
         // will know it at compile time
@@ -15,6 +18,8 @@ public class Demo {
         try {
             System.out.println(nums[5]);
             j = 10 / i;
+            if(j==0)
+                throw new ArithmeticException();
             System.out.println(str.length());
             System.out.println(nums[1]);
         } catch (ArithmeticException e) {
